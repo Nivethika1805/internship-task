@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ice Cream Menu</title>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+<style>
+  /* Fonts and basic styles */
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(to bottom right, #0c1c33, #1b2b49);
+  color: #BDD8F1;
+}
+
+/* Header Styling */
+header {
+  text-align: center;
+  padding: 40px 20px 20px;
+}
+
+header h1 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 52px;
+  color: #82A6CB;
+  margin-bottom: 10px;
+  text-shadow: 0 0 10px #3667A6;
+}
+
+header p {
+  font-size: 18px;
+  color: #BDD8F1;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-shadow: 0 0 4px #3667A6;
+}
+
+/* Category Titles with Slide-in Animation */
+.category h3 {
+  background-color: #214177;
+  color: #BDD8F1;
+  padding: 12px;
+  margin: 35px 10px 15px 10px;
+  border-radius: 10px;
+  font-size: 24px;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+  animation: slideInFromLeft 2s ease-out forwards;
+  opacity: 0;
+}
+
+/* Optional staggered delay (add classes like delay-1, delay-2 to h3) */
+.delay-1 { animation-delay: 0.3s; }
+.delay-2 { animation-delay: 0.6s; }
+.delay-3 { animation-delay: 0.9s; }
+
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Layout for Ice Cream boxes */
+.flavor-group {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  justify-items: center;
+  padding: 0 20px 10px;
+}
+
+.flavor-group.two {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+/* Box Styling */
+.box {
+  background-color: #1e2e47;
+  border: 1px solid #3667A6;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  width: 200px;
+  padding: 10px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.box:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 16px rgba(129, 196, 255, 0.5);
+}
+
+/* Image inside the box */
+.box img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+/* Titles inside the box */
+.box h3 {
+  margin: 5px 0;
+  font-size: 18px;
+  color: #BDD8F1;
+}
+
+/* Description paragraph */
+.desc {
+  font-size: 14px;
+  color: #AABFD4;
+  margin-top: 6px;
+  line-height: 1.4;
+}
+
+/* Responsive for mobile */
+@media (max-width: 768px) {
+  .flavor-group,
+  .flavor-group.two {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  header h1 {
+    font-size: 36px;
+  }
+}
+/* Keep or replace your existing .category h3 */
+.category h3 {
+  background-color: #214177;
+  color: #BDD8F1;
+  padding: 12px;
+  margin: 35px 10px 15px 10px;
+  border-radius: 10px;
+  font-size: 24px;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+  overflow: hidden;
+}
+
+/* Animate only the text inside */
+.category h3 span {
+  display: inline-block;
+  transform: translateX(-100%);
+  opacity: 0;
+  animation: slideInText 1.5s ease forwards;
+}
+
+/* Staggered delays */
+.delay-1 span { animation-delay: 0.3s; }
+.delay-2 span { animation-delay: 0.6s; }
+.delay-3 span { animation-delay: 0.9s; }
+
+@keyframes slideInText {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+
+</style>
+</head>
+<body>
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ice Cream Menu</title>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+<style>
+/* [Same exact CSS you posted — kept untouched] */
+</style>
+</head>
+<body>
+
+  <header>
+    <h1>MENU</h1>
+    <p>“Keep It Cool · Scoop the Chill”</p>
+  </header>
+
+  <!-- Cup Ice Creams -->
+<div class="category"><h3 class="delay-1"><span>Cup Ice Creams</span></h3></div>
+  <div class="flavor-group">
+    <div class="box"><img src="./Photos/c3.jpg"><h3>Chocolate</h3><h3>&#8377 50</h3><p class="desc">Rich and creamy cocoa delight.</p></div>
+    <div class="box"><img src="./Photos/c4.jpg"><h3>Vanilla</h3><h3>&#8377 40</h3><p class="desc">Smooth classic goodness.</p></div>
+    <div class="box"><img src="./Photos/c2.jpg"><h3>Strawberry</h3><h3>&#8377 40</h3><p class="desc">Juicy strawberry flavor burst.</p></div>
+  </div>
+  <div class="flavor-group two">
+    <div class="box"><img src="./Photos/c1.jpg"><h3>Mixed Flavours</h3><h3>&#8377 60</h3><p class="desc">A colorful swirl of surprises.</p></div>
+    <div class="box"><img src="./Photos/c5.jpg"><h3>Blueberry</h3><h3>&#8377 35</h3><p class="desc">Tangy berry chill-out scoop.</p></div>
+  </div>
+
+  <!-- Stick Ice Cream -->
+   <div class="category"><h3 class="delay-2"><span>Stick Ice Creams</span></h3></div>
+  <div class="flavor-group">
+    <div class="box"><img src="./Photos/s3.jpg"><h3>Jolly train - Blueberry</h3><h3>&#8377 30</h3><p class="desc">Blueberry fun on a stick.</p></div>
+    <div class="box"><img src="./Photos/s1.jpg"><h3>Little heart - Strawberry</h3><h3>&#8377 35</h3><p class="desc">Creamy heart-shaped bliss.</p></div>
+    <div class="box"><img src="./Photos/s2.jpg"><h3>Chocolate</h3><h3>&#8377 40</h3><p class="desc">Classic choco indulgence.</p></div>
+  </div>
+  <div class="flavor-group two">
+    <div class="box"><img src="./Photos/s5.jpg"><h3>Little heart - Choco</h3><h3>&#8377 35</h3><p class="desc">Choco-berry dreamy combo.</p></div>
+    <div class="box"><img src="./Photos/s4.jpg"><h3>Jolly train - Chocolate</h3><h3>&#8377 30</h3><p class="desc">Hop on the choco train!</p></div>
+  </div>
+
+  <!-- Tubs Ice Cream -->
+   <div class="category"><h3 class="delay-3"><span>Tubs Ice Creams</span></h3></div>
+  <div class="flavor-group">
+    <div class="box"><img src="./Photos/t1.jpg"><h3>Chocolate - &#8377 240</h3><p class="desc">A tub of deep chocolate joy.</p></div>
+    <div class="box"><img src="./Photos/t3.jpg"><h3>BlackCurrent - &#8377 260</h3><p class="desc">Purple, tart, and magical.</p></div>
+    <div class="box"><img src="./Photos/t4.jpg"><h3>Red Velvet - &#8377 280</h3><p class="desc">Velvety cake + cream = wow!</p></div>
+  </div>
+  <div class="flavor-group two">
+    <div class="box"><img src="./Photos/t5.jpg"><h3>Butterscotch - &#8377 260</h3><p class="desc">Golden, nutty butter love.</p></div>
+    <div class="box"><img src="./Photos/t2.jpg"><h3>Vanilla - &#8377 250</h3><p class="desc">Scoops of silky vanilla.</p></div>
+  </div>
+
+  <!-- Ice Cream Cakes -->
+   <div class="category"><h3 class="delay-1"><span>Ice Creams Cakes</span></h3></div>
+  <div class="flavor-group">
+    <div class="box"><img src="./Photos/cc1.jpg"><h3>Butterscotch - &#8377 450</h3><p class="desc">Caramel nutty dreams.</p></div>
+    <div class="box"><img src="./Photos/cc2.jpg"><h3>Red Velvet - &#8377 460</h3><p class="desc">Romantic red & creamy white.</p></div>
+    <div class="box"><img src="./Photos/cc3.jpg"><h3>Fruit & BlackCurrent - &#8377 500</h3><p class="desc">Royal fruity delight.</p></div>
+  </div>
+  <div class="flavor-group two">
+    <div class="box"><img src="./Photos/cc4.jpg"><h3>Strawberry - &#8377 440</h3><p class="desc">Berries & cream together.</p></div>
+    <div class="box"><img src="./Photos/cc5.jpg"><h3>Dark Choco - &#8377 575</h3><p class="desc">Dark, rich, irresistible.</p></div>
+  </div>
+
+  <!-- Bytes -->
+   <div class="category"><h3 class="delay-1"><span>Bytes</span></h3></div>
+  <div class="flavor-group">
+    <div class="box"><img src="./Photos/b1.jpg"><h3>Strawberry Choco</h3><h3>&#8377 15</h3><p class="desc">Berry-choco delight bits.</p></div>
+    <div class="box"><img src="./Photos/b2.jpg"><h3>Cotton Candy</h3><h3>&#8377 5</h3><p class="desc">Sweet cloud nostalgia.</p></div>
+    <div class="box"><img src="./Photos/b3.jpg"><h3>Little Heart</h3><h3>&#8377 10</h3><p class="desc">Tiny creamy cuteness.</p></div>
+  </div>
+  <div class="flavor-group two">
+    <div class="box"><img src="./Photos/b4.jpg"><h3>Choco Bytes</h3><h3>&#8377 5</h3><p class="desc">Crunchy choco bombs.</p></div>
+    <div class="box"><img src="./Photos/b5.jpg"><h3>Vanilla Choco</h3><h3>&#8377 15</h3><p class="desc">Classic combo in bites.</p></div>
+  </div>
+
+  <!-- Order Button -->
+  <div style="text-align: center; margin: 50px 0;">
+    <a href="contact.html">
+      <button style="
+        background-color: #ff3030;
+        color: white;
+        border: none;
+        padding: 15px 30px;
+        font-size: 18px;
+        font-weight: bold;
+        border-radius: 12px;
+        cursor: pointer;
+        transition: background 0.3s ease;
+      ">ORDER HERE</button>
+    </a>
+  </div>
+
+</body>
+</html>
+
+</body>
+</html>
